@@ -1,0 +1,111 @@
+{
+    "result": {
+        "items": [
+            
+              {
+                "id": 0,
+                "type": "chat",
+                "title": null,
+                "text": "Alex needs you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "low",
+                "date": "1 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 1,
+                "type": "gitlab",
+                "title": "New MR",
+                "text": "New merge request wa assign to you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "normal",
+                "date": "3 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 2,
+                "type": "jira",
+                "title": "Task activity",
+                "text": "Task Something has updated its status",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "high",
+                "date": "2 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 3,
+                "type": "chat",
+                "title": null,
+                "text": "Alex needs you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "low",
+                "date": "1 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 4,
+                "type": "gitlab",
+                "title": "New MR",
+                "text": "New merge request wa assign to you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "normal",
+                "date": "3 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 5,
+                "type": "jira",
+                "title": "Task activity",
+                "text": "Task Something has updated its status",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "high",
+                "date": "2 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 6,
+                "type": "chat",
+                "title": null,
+                "text": "Alex needs you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "low",
+                "date": "1 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 6,
+                "type": "gitlab",
+                "title": "New MR",
+                "text": "New merge request wa assign to you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "normal",
+                "date": "3 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              }
+        ]
+    }
+}
