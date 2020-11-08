@@ -1,6 +1,29 @@
 {
     "result": {
         "user": {},
-        "app": {}
+        "app": {},
+        "integrations": [
+            {
+                "id": 1,
+                "type": "jira",
+                "title": "Task activity",
+                "description": "Send notification on every status update of a the task.",
+                "options": {}
+            },
+            {
+                "id": 2,
+                "type": "gitlab",
+                "title": "MR activity",
+                "description": "Send notification a MR status update.",
+                "options": {}
+            },
+            {
+                "id": 3,
+                "type": "chat",
+                "title": "Hrischo activity",
+                "description": "Send notification every time Hrischo sends you a message.",
+                "options": {}
+            }
+        ]
     }
 }
