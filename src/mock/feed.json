@@ -1,0 +1,45 @@
+{
+    "result": {
+        "notifications": [
+            {
+                "id": 1,
+                "type": "jira",
+                "title": "Task activity",
+                "text": "Task Something has updated its status",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "high",
+                "date": "2 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 2,
+                "type": "chat",
+                "title": null,
+                "text": "Alex needs you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "low",
+                "date": "1 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              },
+              {
+                "id": 3,
+                "type": "gitlab",
+                "title": "New MR",
+                "text": "New merge request wa assign to you",
+                "href": "https://vuetifyjs.com/components/api-explorer",
+                "priority": "normal",
+                "date": "3 days ago",
+                "dateNext": "",
+                "isResolved": false,
+                "isSnoosed": false,
+                "isSnooseExpired": false
+              }
+        ]
+    }
+}
