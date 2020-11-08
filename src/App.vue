@@ -17,8 +17,6 @@
         ></v-img>
       </template>
 
-      <v-toolbar-title>Reminders</v-toolbar-title>
-
       <v-spacer></v-spacer>
 
       <v-btn icon>
@@ -30,9 +28,9 @@
 
       <template v-slot:extension>
         <v-tabs v-model="tab" align-with-title>
-          <v-tab>Routine</v-tab>
-          <v-tab>Feed</v-tab>
-          <v-tab>Reminders</v-tab>
+          <v-tab>Notifications</v-tab>
+          <v-tab>History</v-tab>
+          <v-tab>Integrations</v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
@@ -44,33 +42,31 @@
       <v-container style="height: 1000px;margin-top:200px;" fluid>
         <v-tabs-items v-model="tab">
         <v-tab-item>
-          <TodayBoard/>
+          <Notifications/>
         </v-tab-item>
         <v-tab-item>
-          <FeedBoard/>
+          <History/>
         </v-tab-item>
         <v-tab-item>
-          <RemindersBoard/>
+          <Integrations/>
         </v-tab-item>
       </v-tabs-items>
       </v-container>
     </v-sheet>
-
 </v-app>
 </template>
 
 <script>
-import TodayBoard from './components/TodayBoard'
-import FeedBoard from './components/FeedBoard'
-import RemindersBoard from './components/RemindersBoard'
+import Notifications from './components/Notifications'
+import History from './components/History'
+import Integrations from './components/Integrations'
 
 export default {
   name: 'App',
 
   components: {
-    TodayBoard,
-    FeedBoard,
-    RemindersBoard
+    Notifications,
+    Integrations
   },
 
   data: () => ({
