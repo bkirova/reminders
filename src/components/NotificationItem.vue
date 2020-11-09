@@ -3,7 +3,7 @@
 
         <div class="notification-avatar">
             <v-avatar
-            size=30
+            size=50
             tile
             >
             <v-img
@@ -15,7 +15,7 @@
         </div>
 
         <div class="notification-details">
-            <div class="details-title text-uppercase">{{type}}</div>
+            <div class="details-title text-uppercase primary--text">{{type}}</div>
             <div class="details-items">
                 <div class="title">{{text}}</div>
                 <div class="subtitle-2 text--disabled">{{date}}</div>
@@ -26,27 +26,29 @@
             <div class="snoose-title text-uppercase">Snoose</div>
             <div v-if="isSnooseExpired">This was already snoosed!</div>
             <div class="snoose-items">
-                <v-btn depressed @click="snoose({id, minutes: 1})">
+                <v-btn depressed outlined class="mr-1"  @click="snoose({id, minutes: 1})">
                 1 min
                 </v-btn>
-                <v-btn depressed @click="snoose({id, minutes: 5})">
+                <v-btn depressed outlined class="mr-1"  @click="snoose({id, minutes: 5})">
                 5 min
                 </v-btn>
-                <v-btn depressed @click="snoose({id, minutes: 10})">
+                <v-btn depressed outlined  @click="snoose({id, minutes: 10})">
                 10 min
                 </v-btn>
+
+                <v-btn
+                outlined
+                depressed
+                color="primary"
+                class="ml-3"
+                @click="resolve({id})"
+                >
+                Resolve
+                </v-btn>
             </div>
+            
         </div>
 
-        <div class="notification-resolve">
-            <v-btn
-            outlined
-            color="indigo"
-            @click="resolve({id})"
-            >
-            Resolve
-            </v-btn>
-        </div>
         
     </div>
 </template>
@@ -92,9 +94,9 @@ export default {
   data: () => ({
     mappings: {
       icons: {
-        jira: 'https://symbols-electrical.getvecta.com/stencil_85/33_jira-icon.6a60be29f8.jpg',
-        chat: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Google_Hangouts_Chat_icon.png',
-        gitlab: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1200px-GitLab_Logo.svg.png'
+        jira: 'jira.png',
+        chat: 'hangouts.png',
+        gitlab: 'gitlab.png'
       },
       background: {
         high: '#ff4a7b',
@@ -116,7 +118,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
 @keyframes blink {
   50% {
     background-color: #ecdada;
@@ -127,8 +129,9 @@ export default {
     display flex
     justify-content space-between
     align-items center
-    background #e8e8e8
+    background #f5f5f5
     padding 20px
+    border 2px solid #ececec
     &.snoose-expired
         animation: blink 2s infinite;
 
@@ -141,6 +144,11 @@ export default {
         display flex
         flex-direction column
         align-items flex-start
+
+.notification-snoose
+  display flex    
+  flex-direction column
+  align-items flex-start
 
  
 </style>

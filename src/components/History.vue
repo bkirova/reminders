@@ -1,10 +1,26 @@
 <template>
   <v-container>
-    <v-row v-for="item in items" :key="item.id" class="text-center">
-        <v-col class="mb-4">
-          <HistoryItem v-bind="item"/>
-        </v-col>
+    <v-row >
+        <v-col class="actions">
+            <v-btn outlined>
+                Today
+            </v-btn>
+            <v-btn outlined class="ml-1">
+                Yesterday
+            </v-btn>
+      </v-col>
     </v-row>
+    <v-timeline
+        dense
+      >
+        <v-timeline-item
+            v-for="item in items" :key="item.id"
+          color="pink"
+          small 
+        >
+        <HistoryItem v-bind="item"/>
+        </v-timeline-item>
+    </v-timeline>
   </v-container>
 </template>
 <script>
@@ -33,3 +49,9 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+.actions
+    display flex
+    justify-content flex-end
+ 
+</style>

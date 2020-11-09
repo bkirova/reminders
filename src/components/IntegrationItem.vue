@@ -1,13 +1,12 @@
 <template>
     <div :class="['integration-container']">
 
-        <div class="integration-avatar">
+        <div class="integration-avatar mr-5">
             <v-avatar
-            size=30
+            size=50
             tile
             >
             <v-img
-                class="elevation-3"
                 alt=""
                 :src="mappings.icons[type]"
             ></v-img>
@@ -15,30 +14,16 @@
         </div>
 
         <div class="integration-details">
-            <div class="details-title text-uppercase">{{type}}</div>
+            <div class="details-title title text-uppercase text-center">
+              {{type}}
+              <v-icon small color="primary">mdi-pencil-outline</v-icon>
+              <v-icon small color="primary">mdi-trash-can-outline</v-icon>
+            </div>
             <div class="details-items">
-                <div class="title">{{title}}</div>
+                <div class="subtitle-1">{{title}}</div>
                 <div class="subtitle-2 text--disabled">{{description}}</div>
             </div>
         </div>
-
-        <div class="integration-resolve">
-            <v-btn
-            outlined
-            color="indigo"
-            @click="edit({id})"
-            >
-            Edit
-            </v-btn>
-            <v-btn
-            outlined
-            color="indigo"
-            @click="remove({id})"
-            >
-            Remove
-            </v-btn>
-        </div>
-        
     </div>
 </template>
 <script>
@@ -67,9 +52,9 @@ export default {
   data: () => ({
     mappings: {
       icons: {
-        jira: 'https://symbols-electrical.getvecta.com/stencil_85/33_jira-icon.6a60be29f8.jpg',
-        chat: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/Google_Hangouts_Chat_icon.png',
-        gitlab: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1200px-GitLab_Logo.svg.png'
+        jira: 'jira.png',
+        chat: 'hangouts.png',
+        gitlab: 'gitlab.png'
       },
       background: {
         high: '#ff4a7b',
@@ -93,16 +78,15 @@ export default {
 <style lang="stylus">
 .integration-container
     display flex
-    justify-content space-between
     align-items center
-    background #e8e8e8
+    background #f5f5f5
     padding 20px
+    border 2px solid #ececec
     
 .integration-details
     display flex    
     flex-direction column
     align-items flex-start
-    min-width 350px
     .details-items
         display flex
         flex-direction column

@@ -1,7 +1,14 @@
 <template>
   <v-container>
-    <v-row v-for="integration in integrations" :key="integration.id" class="text-center">
-        <v-col class="mb-4">
+    <v-row>
+      <v-col class="actions">
+        <v-btn icon>
+            <v-icon>mdi-plus</v-icon>
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
+        <v-col v-for="integration in integrations" :key="integration.id" cols="6">
           <IntegrationItem v-bind="integration"/>
         </v-col>
     </v-row>
@@ -33,3 +40,9 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+.actions
+    display flex
+    justify-content flex-end
+ 
+</style>

@@ -1,7 +1,17 @@
 <template>
   <v-container>
-    <v-row v-for="notification in notifications" :key="notification.id" class="text-center">
-        <v-col class="mb-4">
+    <v-row>
+      <v-col class="actions">
+        <v-btn icon>
+            <v-icon>mdi-view-agenda-outline</v-icon>
+        </v-btn>
+        <v-btn icon>
+            <v-icon>mdi-view-grid-outline</v-icon>
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row v-for="notification in notifications" :key="notification.id">
+        <v-col >
           <NotificationItem v-bind="notification"/>
         </v-col>
     </v-row>
@@ -23,23 +33,6 @@ export default {
   computed: mapState({
     notifications: state => state.notifications.current,
   }),
-  watch: {
-    notifications: {
-      handler: function (after, before) {
-        // Return the object that changed
-        // var vm = this;
-        // let changed = after.filter( function( p, idx ) {
-        //   return Object.keys(p).some( function( prop ) {
-        //     return p[prop] !== vm.$data.oldPeople[idx][prop];
-        //   })
-        // })
-        // // Log it
-        // vm.setValue();
-        console.error(after)
-      },
-      deep: true,
-    }
-  },
   methods: {
     ...mapActions({
       pull: 'notifications/pull'
@@ -57,3 +50,9 @@ export default {
   }
 }
 </script>
+<style lang="stylus" scoped>
+.actions
+    display flex
+    justify-content flex-end
+ 
+</style>
